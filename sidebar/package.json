@@ -1,0 +1,23 @@
+{
+  "name": "obsidian-agent-workspace-sidebar",
+  "version": "0.3.0-alpha.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/prepare-sites-build.mjs",
+    "preview": "vite preview",
+    "test:sites": "node --test tests/sites-worker.test.mjs",
+    "build:plugin": "node build-plugin.mjs",
+    "test": "node --test tests/data.test.mjs tests/plugin.test.mjs tests/host.test.mjs tests/refresh.test.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "5.0.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "vite": "6.4.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

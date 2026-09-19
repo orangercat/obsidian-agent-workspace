@@ -1,0 +1,11 @@
+import {build} from 'vite';
+import {mkdir,writeFile,copyFile,readFile} from 'node:fs/promises';
+const {version}=JSON.parse(await readFile('package.json','utf8'));
+await build({configFile:false,build:{outDir:'dist/plugin/lib',emptyOutDir:true,minify:false,lib:{entry:'src/plugin.jsx',formats:['cjs'],fileName:()=> 'client.js'},rollupOptions:{external:['react'],output:{banner:'window.__ModuleLoader__.load({id:"dsh-obsidian-workspace",factory:(require)=>{const exports={};const module={exports};',footer:'return module.exports;}});'}}}});
+await mkdir('dist/plugin/lib',{recursive:true});
+await copyFile('host/index.js','dist/plugin/lib/index.js');
+for (const file of ['export_workspace.py','obsidian_agent.py','session_context.py']) await copyFile('../'+file,'dist/plugin/lib/'+file);
+await writeFile('dist/plugin/package.json',JSON.stringify({name:'dsh-obsidian-workspace',version,description:'Read-only Obsidian memory and agent task sidebar',type:'module',main:'lib/index.js',exports:{'.':'./lib/index.js','./client':'./lib/client.js','./package.json':'./package.json'},files:['lib','cordis.patch.yml','README.md','LICENSE'],license:'MIT',engines:{node:'>=22.12.0'},dsh:{engines:{dsh:'>=0.1.5-rc.1'},bundle:{patch:'./cordis.patch.yml'},client:{platform:'web',inject:['@deepseek-ai/dsh-client-ui-sidebar-right']}}},null,2));
+await writeFile('dist/plugin/cordis.patch.yml',"- insert:\n    - id: obsidian-workspace\n      name: dsh-obsidian-workspace\n");
+await copyFile('../LICENSE','dist/plugin/LICENSE');
+await copyFile('PACKAGE-README.md','dist/plugin/README.md');

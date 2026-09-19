@@ -1,0 +1,106 @@
+body{margin:0;background:#f4f5f8}
+.oaw-root{--purple:#7355c6;--ink:#292632;--muted:#77727f;--line:#eae7ef;font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}
+.oaw-root *{box-sizing:border-box}
+.oaw-root button,.oaw-root input{font:inherit}
+.oaw-root button{cursor:pointer;border:1px solid var(--line);background:white;color:inherit;border-radius:7px;padding:7px 12px}
+.oaw-root button:hover{background:#f5f1fc}
+.oaw-root :focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+.oaw-shell{display:flex;min-height:100dvh}
+.oaw-host{flex:1;display:flex;flex-direction:column;min-width:0}
+.oaw-hostbar{display:flex;gap:28px;padding:24px 36px;border-bottom:1px solid var(--line);align-items:center;font-size:11px;color:var(--muted)}
+.oaw-hostbar b{font-size:23px;color:var(--ink)}
+.oaw-hostbar span:last-child{margin-left:auto}
+.oaw-intro{max-width:690px;padding:85px 55px 35px;margin:auto}
+.oaw-eyebrow{color:var(--purple);font-size:10px;font-weight:700;letter-spacing:2px}
+.oaw-intro h1{font-size:48px;line-height:1.3;letter-spacing:-2px;font-weight:550;margin:22px 0}
+.oaw-intro>p{color:var(--muted);font-size:16px;max-width:400px}
+.oaw-message{background:#fff;border:1px solid var(--line);border-radius:14px;margin-top:44px;padding:24px;box-shadow:0 8px 28px #33224404}
+.oaw-message small{color:var(--purple)}
+.oaw-message h2{font-size:17px;font-weight:550}
+.oaw-message p,.oaw-message span{font-size:12px;color:var(--muted)}
+.oaw-message span{display:block;border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
+.oaw-caption{font-size:10px;letter-spacing:1px;color:var(--muted);margin-top:32px}
+.oaw-composer{margin:28px 40px;padding:20px 24px;border:1px solid #e2dfe9;background:#fafafb;color:#a5a0ad;border-radius:14px;font-size:12px}
+.oaw-composer span{float:right}
+.oaw-panel{width:400px;flex-shrink:0;height:100dvh;display:flex;flex-direction:column;background:#fff;border-left:1px solid #dedbe6;position:sticky;top:0}
+.oaw-panel header{padding:22px 22px 16px}
+.oaw-brand{display:flex;gap:10px;align-items:center}
+.oaw-brand strong{font-size:15px}
+.oaw-brand small{display:block;font-size:10px;color:var(--muted);margin-top:2px}
+.oaw-mark{background:#ede6fa;color:var(--purple);border-radius:9px;width:34px;height:36px;display:grid;place-items:center;font-size:22px;font-weight:650}
+.oaw-project{margin-top:21px;display:flex;justify-content:space-between;background:#f7f7f9;border:1px solid var(--line);border-radius:7px;padding:8px 11px;font-size:12px}
+.oaw-project span{color:var(--muted);font-size:10px}
+.oaw-panel nav{display:flex;border-bottom:1px solid var(--line);padding:0 20px;gap:24px}
+.oaw-panel nav button{border:0;border-bottom:2px solid transparent;border-radius:0;padding:12px 18px;background:transparent;color:var(--muted)}
+.oaw-panel nav button[aria-pressed=true]{color:var(--purple);border-bottom-color:var(--purple);font-weight:600}
+.oaw-content{padding:20px;overflow:auto;flex:1;min-height:0}
+.oaw-warning{background:#fffbf2;border:1px solid #f0dfb6;border-radius:8px;padding:12px 14px;color:#856128;font-size:12px}
+.oaw-warning p{font-size:11px;margin:4px 0 0}
+.oaw-search{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:18px 0 10px;background:#fafafb;color:var(--ink)}
+.oaw-search::placeholder{color:#9993a2;font-size:12px}
+.oaw-content h3{font-size:11px;color:var(--muted);font-weight:500;margin:14px 0 10px}
+.oaw-content h3 span{float:right}
+.oaw-root .oaw-card{display:block;text-align:left;width:100%;padding:14px;margin-bottom:9px;border-radius:8px}
+.oaw-card>div{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.oaw-card strong{font-size:13px;font-weight:550}
+.oaw-card small{color:var(--muted);display:block;margin-top:6px;font-size:10px;overflow-wrap:anywhere}
+.oaw-card p{color:var(--muted);font-size:11px;margin:8px 0 0}
+.oaw-root .featured{border-color:#d4c7ee;background:#f9f6ff}
+.oaw-card div>span:not(.oaw-badge){color:#aaa0bb}
+.oaw-panel footer{border-top:1px solid var(--line);padding:15px 20px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.oaw-panel footer span{font-size:9px;color:var(--muted)}
+.oaw-panel footer button{font-size:10px;white-space:nowrap}
+.oaw-progress>div{display:flex;align-items:baseline;gap:8px}
+.oaw-progress strong{font-size:25px;font-weight:550}
+.oaw-progress span{font-size:11px;color:var(--muted)}
+.oaw-progress b{margin-left:auto;font-size:12px;color:var(--purple)}
+.oaw-progress progress{width:100%;height:6px;accent-color:var(--purple);border:0;display:block;margin-top:12px}
+.oaw-progress progress::-webkit-progress-bar{background:#eeeaf5;border-radius:4px}
+.oaw-progress progress::-webkit-progress-value{background:var(--purple);border-radius:4px}
+.oaw-filters{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 17px}
+.oaw-root .oaw-filters button{font-size:10px;padding:4px 8px;border:0;color:var(--muted)}
+.oaw-filters button[aria-pressed=true]{background:#eee7fa;color:var(--purple)}
+.oaw-badge{font-size:10px;padding:2px 7px;border-radius:4px;white-space:nowrap;background:#f1eff4;color:#777}
+.oaw-badge.blocked{background:#fff0ee;color:#ba6259}
+.oaw-badge.active{background:#f0e9fb;color:#8058b9}
+.oaw-badge.done{background:#eaf5ee;color:#578669}
+.oaw-badge.review{background:#fff4df;color:#8f6d28}
+.oaw-root .oaw-back{border:0;padding:0;color:var(--muted);font-size:12px}
+.oaw-content h2{font-size:21px;font-weight:550;margin:20px 0 12px}
+.oaw-meta{display:flex;align-items:center;gap:12px;font-size:11px;color:var(--muted)}
+.oaw-path{font-size:10px;color:var(--muted);overflow-wrap:anywhere}
+.oaw-document{white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:13px;line-height:1.65;border-top:1px solid var(--line);padding-top:18px}
+.oaw-hint{font-size:10px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+.oaw-empty{padding:35px 10px;text-align:center;color:var(--muted)}
+.oaw-empty button{margin:8px}
+.oaw-root .oaw-primary{background:var(--purple);color:white}
+.oaw-embedded .oaw-panel{width:100%;height:100%;min-height:500px;border:0;position:static}
+.oaw-embedded{height:100%}@media(max-width:760px){.oaw-host{display:none}
+.oaw-panel{width:100%;border:0}
+.oaw-shell{justify-content:center}}@media(prefers-color-scheme:dark){.oaw-embedded{color-scheme:light}}
+
+.oaw-mark{position:relative;overflow:hidden;background:white;width:30px;height:36px;border-radius:0}
+.oaw-mark img{position:absolute;width:1536px;max-width:none;height:1024px;left:-70px;top:-158px}
+.oaw-panel nav{gap:0;margin:0 20px;padding:3px;border:1px solid var(--line);border-radius:8px;background:#faf9fc}
+.oaw-panel nav button{flex:1;border:0;border-radius:6px;padding:9px}
+.oaw-panel nav button[aria-pressed=true]{background:var(--purple);color:white}
+.oaw-card strong{font-size:14px}
+.oaw-card small,.oaw-card p{font-size:12px}
+.oaw-panel footer span{font-size:10px}
+.oaw-content h3{font-size:13px}
+.oaw-document h3{color:var(--ink);font-size:15px;font-weight:600;margin:12px 0 4px}
+.oaw-badge.blocked{background:#fff4df;color:#916325}
+.oaw-content .oaw-document>div{white-space:pre-wrap;overflow-wrap:anywhere}
+.oaw-brand small{font-size:11px}
+.oaw-root .oaw-filters button{font-size:11px}
+.oaw-meta{font-size:12px}
+.oaw-badge{font-size:11px}
+.oaw-path{font-size:11px}
+
+.oaw-connect{display:flex;gap:10px;align-items:center;font-size:11px;color:var(--muted);margin-top:12px}.oaw-connect select{min-width:0;flex:1;padding:7px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink)}.oaw-digest{display:block;overflow-wrap:anywhere;margin:6px 0}.oaw-warning>small{display:block}.oaw-card .oaw-context-state.stale,.oaw-card .oaw-context-state.error{color:#a34f20}.oaw-card .oaw-context-state.current{color:#3c7d54}.oaw-root button:disabled{opacity:.6;cursor:default}
+
+.oaw-refresh-controls{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}.oaw-refresh-controls label{display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer}.oaw-refresh-controls input{accent-color:var(--purple)}
+
+.oaw-settings{padding:20px;max-width:800px}.oaw-settings p{font-size:13px}.oaw-settings fieldset{border:0;padding:0;margin:0}.oaw-settings-project{border:1px solid var(--line);padding:16px;border-radius:8px;margin:16px 0}.oaw-settings label{display:block;margin:12px 0;font-size:13px}.oaw-settings input{display:block;width:100%;padding:8px;margin-top:4px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink)}.oaw-settings-row{display:flex;justify-content:space-between;align-items:center;gap:12px}.oaw-settings button{margin:4px 8px 4px 0}.oaw-settings [role=alert]{color:#a34f20}.oaw-settings [role=status]{color:#3c7d54}
+
+.oaw-connect-row{display:flex;align-items:center;gap:8px;margin-top:12px}.oaw-connect-row .oaw-connect{flex:1;min-width:0;margin-top:0}.oaw-root .oaw-delete-project{flex-shrink:0;white-space:nowrap;font-size:11px;padding:7px 8px;color:#a34f20}
